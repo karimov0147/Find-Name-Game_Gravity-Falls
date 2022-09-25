@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatButton xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/Answers"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/pp_regular"
+        android:layout_gravity="center"/>
+

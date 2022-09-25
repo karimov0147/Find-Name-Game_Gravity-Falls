@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/gameScreenImpl"
+        android:name="com.example.findname.ui.screens.impl.GameScreenImpl"
+        android:label="GameScreenImpl" >
+        <argument
+            android:name="task"
+            app:argType="com.example.findname.source.models.TaskModel" />
+        <action
+            android:id="@+id/action_gameScreenImpl_self"
+            app:destination="@id/gameScreenImpl"
+            app:popUpTo="@id/gameScreenImpl"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/levelsScreenImpl"
+        android:name="com.example.findname.ui.screens.impl.LevelsScreenImpl"
+        android:label="LevelsScreenImpl"
+        tools:layout="@layout/screen_levels">
+        <action
+            android:id="@+id/action_levelsScreenImpl_to_gameScreenImpl"
+            app:destination="@id/gameScreenImpl" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.findname.ui.screens.impl.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_menuScreenImpl"
+            app:destination="@id/menuScreenImpl"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_menu"
+        android:id="@+id/menuScreenImpl"
+        android:name="com.example.findname.ui.screens.impl.MenuScreenImpl"
+        android:label="MenuScreenImpl" >
+        <action
+            android:id="@+id/action_menuScreenImpl_to_levelsScreenImpl"
+            app:destination="@id/levelsScreenImpl" />
+    </fragment>
+</navigation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.10101918465227817" />
+        <entry key="app/src/main/res/drawable/answer_bg.xml" value="0.161" />
+        <entry key="app/src/main/res/drawable/custom_seekbar.xml" value="0.1915" />
+        <entry key="app/src/main/res/drawable/dialog_bg.xml" value="0.1915" />
+        <entry key="app/src/main/res/drawable/group_19.xml" value="0.1915" />
+        <entry key="app/src/main/res/drawable/help_bg.xml" value="0.167" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.167" />
+        <entry key="app/src/main/res/drawable/letter_bg.xml" value="1.0" />
+        <entry key="app/src/main/res/drawable/level_bg.xml" value="0.167" />
+        <entry key="app/src/main/res/drawable/level_text_bg.xml" value="0.2" />
+        <entry key="app/src/main/res/drawable/loading_dialog_bg.xml" value="0.1915" />
+        <entry key="app/src/main/res/drawable/menu_btn_bg.xml" value="0.1915" />
+        <entry key="app/src/main/res/drawable/seekbar_thumb.xml" value="0.1915" />
+        <entry key="app/src/main/res/drawable/start_btn_bg.xml" value="0.173" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.253125" />
+        <entry key="app/src/main/res/layout/answer_dialog.xml" value="0.26666666666666666" />
+        <entry key="app/src/main/res/layout/answer_holder.xml" value="0.2630769230769231" />
+        <entry key="app/src/main/res/layout/dialog_answer.xml" value="0.3831891223733004" />
+        <entry key="app/src/main/res/layout/dialog_download.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/dialog_help.xml" value="0.26666666666666666" />
+        <entry key="app/src/main/res/layout/dialog_win_custom.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/help_dialog.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/item.xml" value="1.5" />
+        <entry key="app/src/main/res/layout/item_free.xml" value="0.26666666666666666" />
+        <entry key="app/src/main/res/layout/letters_holder.xml" value="0.26614583333333336" />
+        <entry key="app/src/main/res/layout/screen_game.xml" value="0.2630769230769231" />
+        <entry key="app/src/main/res/layout/screen_levels.xml" value="0.26614583333333336" />
+        <entry key="app/src/main/res/layout/screen_menu.xml" value="0.26666666666666666" />
+        <entry key="app/src/main/res/layout/screen_splash.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
