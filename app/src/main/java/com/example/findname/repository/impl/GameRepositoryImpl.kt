@@ -5,6 +5,8 @@ import com.example.findname.source.dataBase.AppDatabase
 import com.example.findname.source.dataBase.dao.TaskDao
 import com.example.findname.source.frameworkStorage.SharedPreferences
 import com.example.findname.source.models.TaskModel
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 
 class GameRepositoryImpl : GameRepository {
 
@@ -30,7 +32,12 @@ class GameRepositoryImpl : GameRepository {
 
     }
 
-    override fun getAllTasks(): List<TaskModel> = taskDao.getAllTask()
+    override  fun getAllTasks(): Flow<List<TaskModel>> = flow{
+        val list : List<TaskModel> =  taskDao.getAllTask() ;
+        if (list.isNotEmpty()) {
+            emit(list)
+        }
+    }
 
 
     override fun getScore(): Int {

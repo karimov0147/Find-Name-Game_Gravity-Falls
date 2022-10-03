@@ -5,6 +5,7 @@ import androidx.room.Query
 import androidx.room.Update
 import com.example.findname.source.dataBase.entity.TaskEntity
 import com.example.findname.source.models.TaskModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.selects.select
 
 @Dao

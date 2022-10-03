@@ -1,6 +1,7 @@
 package com.example.findname.ui.screens.impl
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -27,11 +28,11 @@ class LevelsScreenImpl : Fragment(R.layout.screen_levels) ,LevelsScreen{
 
     override  fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.d("aaa" , "create")
         presenter.initUiComponents()
         binding.RecyclerView.adapter = adapter
         adapter.initClickListener {
             presenter.onClickLevel(it)
-
         }
     }
 
@@ -40,8 +41,6 @@ class LevelsScreenImpl : Fragment(R.layout.screen_levels) ,LevelsScreen{
                 array.clear()
                 array.addAll(list)
                 adapter.submitList(array)
-
-
 
 //        Toast.makeText(requireContext(), list.toString(), Toast.LENGTH_SHORT).show()
     }
@@ -53,6 +52,11 @@ class LevelsScreenImpl : Fragment(R.layout.screen_levels) ,LevelsScreen{
                 navController.navigate(LevelsScreenImplDirections.actionLevelsScreenImplToGameScreenImpl(taskModel))
             }
         }
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        presenter.clear()
     }
 
 

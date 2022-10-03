@@ -14,6 +14,7 @@ import kotlinx.coroutines.*
 class SplashScreen : Fragment(R.layout.screen_splash) {
     private val binding by viewBinding(ScreenSplashBinding::bind)
     private val navController by lazy(LazyThreadSafetyMode.NONE) { findNavController() }
+    private var state = true
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -33,13 +34,24 @@ class SplashScreen : Fragment(R.layout.screen_splash) {
 
 
 
-        CoroutineScope(Dispatchers.IO).launch {
+        CoroutineScope(Dispatchers.Main).launch {
             delay(1600)
             withContext(Dispatchers.Main) {
                 navController.navigate(R.id.action_splashScreen_to_menuScreenImpl)
+                state = false
             }
         }
 
+
+
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if (state){
+            navController.navigate(R.id.action_splashScreen_to_menuScreenImpl)
+        }
 
 
 
